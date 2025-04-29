@@ -1,20 +1,58 @@
-# LeetCode Problem #XXX - [Problem Title]
+# LeetCode Problem #020 - [Valid Parentheses]
 
-**Difficulty:** [Easy | Medium | Hard]  
-**Link:** [LeetCode URL](https://leetcode.com/problems/replace-this/)
+**Difficulty:** [Easy]  
+**Link:** [LeetCode URL](https://leetcode.com/problems/valid-parentheses/)
 
 ---
 
 ## 📝 Problem
 
-> [Paste or summarize the problem description here. You can also say “See LeetCode link above.”]
+> Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+1.Open brackets must be closed by the same type of brackets.
+2.Open brackets must be closed in the correct order.
+3.Every close bracket has a corresponding open bracket of the same type.
+
+
+Example 1:
+
+Input: s = "()"
+
+Output: true
+
+Example 2:
+
+Input: s = "()[]{}"
+
+Output: true
+
+Example 3:
+
+Input: s = "(]"
+
+Output: false
+
+Example 4:
+
+Input: s = "([])"
+
+Output: true
+
+ 
+
+Constraints:
+
+1 <= s.length <= 104
+s consists of parentheses only '()[]{}'.
 
 ---
 
 ## 💡 Approach
 
 - [Describe your approach]
-- [Mention key data structures or algorithms used]
+- [Mention key data structures or algorithms used] Use a stack
 - [If multiple approaches, describe each briefly]
 
 ---
@@ -44,7 +82,3 @@
 - [Anything you want to revisit?]
 
 ---
-
-## 📁 Files
-
-- `solution.py`: Final Python solution with time/space complexity and test cases
