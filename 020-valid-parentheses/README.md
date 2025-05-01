@@ -51,9 +51,12 @@ s consists of parentheses only '()[]{}'.
 
 ## 💡 Approach
 
-- [Describe your approach]
-- [Mention key data structures or algorithms used] Use a stack
-- [If multiple approaches, describe each briefly]
+- We use a **stack** to keep track of opening brackets as we iterate through the string.
+- When we see a **closing bracket**, we:
+  - Check if the stack is empty (no opener to match → invalid).
+  - Pop from the stack and compare it to the expected opening bracket using a **dictionary (hash map)**.
+- The dictionary helps match each closing bracket to its corresponding opener in **O(1)** time.
+- At the end, if the stack is empty, the string is valid.
 
 ---
 
@@ -61,24 +64,31 @@ s consists of parentheses only '()[]{}'.
 
 | Metric | Complexity | Notes |
 |--------|------------|-------|
-| 🕒 Time   | O(?)       | [Reasoning here] |
-| 🧠 Space  | O(?)       | [Reasoning here] |
+| 🕒 Time   | O(n)       | We traverse the string once |
+| 🧠 Space  | O(n)       | In the worst case, we store all open brackets in the stack |
 
 ---
 
 ## ✅ Test Cases
 
-| Input | Output | Explanation |
-|-------|--------|-------------|
-| `[...]` | `[...]` | [describe] |
-| `[...]` | `[...]` | [describe] |
+| Input     | Output | Explanation                            |
+|-----------|--------|----------------------------------------|
+| `"()"`    | `True` | Balanced pair                          |
+| `"()[]{}"`| `True` | All valid, sequential pairs            |
+| `"(]"`    | `False`| Closing `]` doesn't match opening `(`  |
+| `"([])"`  | `True` | Properly nested and closed             |
+| `"("`     | `False`| Opening bracket without closing        |
+| `"]"`     | `False`| Closing bracket without opening        |
+| `"([)]"`  | `False`| Correct characters but wrong order     |
 
 ---
 
 ## 🧠 Notes & Learnings
 
-- [What did you learn or struggle with?]
-- [Any cool tricks, syntax, or insights?]
-- [Anything you want to revisit?]
+- Learned how to implement a **stack** using Python lists with `append()` and `pop()`.
+- Reinforced use of a **dictionary** for efficient bracket matching instead of long `if-else` chains.
+- Practiced checking edge cases like unmatched openers or closers.
+- `return not stack` at the end is a smart Pythonic way to check if everything matched.
+- I now understand how the stack data structure enables **Last-In First-Out (LIFO)** logic, which is perfect for matching open/close pairs in order.
 
 ---
