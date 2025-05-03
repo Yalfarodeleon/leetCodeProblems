@@ -12,6 +12,7 @@ I'm solving problems consistently to improve my coding skills and prepare for te
 |-----|------------------------|----------------------------------|
 | 001 | Two Sum               | [Link](./001-two-sum/solution.py) |
 | 020 | Valid Parentheses     | [Link](./020-valid-parentheses/solution.py) |
+| 021 | Merge Two Sorted Lists | [Link](./021-merge-two-sorted-lists/solutions.py) |
 
 ---
 
